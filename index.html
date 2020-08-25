@@ -2,36 +2,68 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <title>Lingua Teacher Manage System</title>
     </head>
     <body>
-        이름:&nbsp;
-        <input id="name" type="text" style="width:150px" onkeypress=enterTest()>
-        <button onclick="search()" stype="width:50px">Search</button>
-        <br>
-        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p style="margin:20px 0px">Lingua Teacher Management System</p>
 
-        부서:&nbsp;
-        <input id="dept" type="text" style="width:50px">
-        전화번호:&nbsp;
-        <input id="contact" type="text" style="width:100px">
-        성범죄확인:&nbsp;
-        <input id="scrime" type="text" style="width:10px">
-        교육청등록:&nbsp;
-        <input id="reg" type="text" style="width:40px">
-        <br>
+                    <ul class="nav nav-pills" style="margin-bottom:10px">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#basic_info">기본정보</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab1">추가메뉴 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab2">추가메뉴 2</a>
+                        </li>
+                    </ul>
 
-        주소:&nbsp;
-        <input id="addr" type="text" style="width:500px">
-        <br>
-        주민등록번호:&nbsp;
-        <input id="nid" type="text" style="width:145px">
-        계좌번호:&nbsp;
-        <input id="account" type="text" style="width:200px">
-        <br>
-        기타사항:
-        <br>
-        <textarea id="memo" rows="5" name="memo" style="width:550px"></textarea>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="basic_info">
+                            이름:&nbsp;
+                            <input id="name" type="text" style="width:150px" onkeypress=enterTest()>
+                            <button onclick="search()" stype="width:50px">Search</button>
+                            <br>
+                            <br>
+        
+                            부서:&nbsp;
+                            <input id="dept" type="text" style="width:60px">
+                            전화번호:&nbsp;
+                            <input id="contact" type="text" style="width:120px">
+                            성범죄확인:&nbsp;
+                            <input id="scrime" type="text" style="width:20px">
+                            교육청등록:&nbsp;
+                            <input id="reg" type="text" style="width:60px">
+                            <br>
+        
+                            주소:&nbsp;
+                            <input id="addr" type="text" style="width:535px">
+                            <br>
+                            주민등록번호:&nbsp;
+                            <input id="nid" type="text" style="width:160px">
+                            계좌번호:&nbsp;
+                            <input id="account" type="text" style="width:230px">
+                            <br>
+                            기타사항:
+                            <br>
+                            <textarea id="memo" rows="5" name="memo" style="width:580px"></textarea>
+                        </div>
+                        <div class="tab-pane fade" id="tab1">
+                            Not yet Implemented
+                        </div>
+                        <div class="tab-pane fade" id="tab2">
+                            Not yet Implemented
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -48,7 +80,7 @@
                 // Function to search and retrieve proper teacher object
                 
                 // For dummy data
-                let requestURL = "https://linguademo.hcjang.com/data.json"
+                let requestURL = "https://raw.githubusercontent.com/hyecheol123/Lingua_Teacher_Manage_Prototype/master/data.json"
                 let request = new XMLHttpRequest();
                 request.open('GET', requestURL);
                 request.send();
@@ -97,5 +129,8 @@
                 }
             }
       </script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
 </html>
