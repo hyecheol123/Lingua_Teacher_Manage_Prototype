@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lingua Teacher Manage System</title>
+    </head>
+    <body>
+        이름:&nbsp;
+        <input id="name" type="text" style="width:150px" onkeypress=enterTest()>
+        <button onclick="search()" stype="width:50px">Search</button>
+        <br>
+        <br>
+
+        부서:&nbsp;
+        <input id="dept" type="text" style="width:50px">
+        전화번호:&nbsp;
+        <input id="contact" type="text" style="width:100px">
+        성범죄확인:&nbsp;
+        <input id="contact" type="text" style="width:10px">
+        <br>
+
+        주소:&nbsp;
+        <input id="addr" type="text" style="width:370px">
+        <br>
+        주민등록번호:&nbsp;
+        <input id="nid" type="text" style="width:110px">
+        계좌번호:&nbsp;
+        <input id="계좌번호" type="text" style="width:110px">
+        <br>
+        기타사항:
+        <br>
+        <textarea rows="5" name="memo" style="width:500px"></textarea>
+
+
+
+        <script type="text/javascript">
+            function enterTest() {
+                // Function to check whether enter key is pressed inside "name" textbox
+                // when enter key pressed, search teacher by the name
+                if(window.event.keyCode == 13) {
+                    search();
+                }
+            }
+
+            function search() {
+                // Function to search and retrieve Teacher Data
+                // TODO
+                /*
+                // Load Dummy Data
+                var teacher;
+                let requestURL = "https://raw.githubusercontent.com/hyecheol123/Lingua_Teacher_Manage_Prototype/master/data.json?token=AK6OKDWSM3TOVHZMCCOM6CK7JZHW4"
+                let request = new XMLHttpRequest();
+                request.open('GET', requestURL);
+                request.send();
+                request.onreadystatechange = function() {
+                    if(request.readyState === XMLHttpRequest.DONE) {
+                        if(request.status == 200) {
+                            teacher = JSON.parse(request.responseText);
+                        } else {
+                            alert("fail to load");
+                        }
+                    }
+                }
+                */
+            }
+      </script>
+  </body>
+</html>
