@@ -16,7 +16,9 @@
         전화번호:&nbsp;
         <input id="contact" type="text" style="width:100px">
         성범죄확인:&nbsp;
-        <input id="contact" type="text" style="width:10px">
+        <input id="scrime" type="text" style="width:10px">
+        교육청등록:&nbsp;
+        <input id="reg" type="text" style="width:40px">
         <br>
 
         주소:&nbsp;
@@ -25,11 +27,11 @@
         주민등록번호:&nbsp;
         <input id="nid" type="text" style="width:110px">
         계좌번호:&nbsp;
-        <input id="계좌번호" type="text" style="width:110px">
+        <input id="account" type="text" style="width:110px">
         <br>
         기타사항:
         <br>
-        <textarea rows="5" name="memo" style="width:500px"></textarea>
+        <textarea id="memo" rows="5" name="memo" style="width:500px"></textarea>
 
 
 
@@ -43,25 +45,56 @@
             }
 
             function search() {
-                // Function to search and retrieve Teacher Data
-                // TODO
-                /*
-                // Load Dummy Data
-                var teacher;
-                let requestURL = "https://raw.githubusercontent.com/hyecheol123/Lingua_Teacher_Manage_Prototype/master/data.json?token=AK6OKDWSM3TOVHZMCCOM6CK7JZHW4"
+                // Function to search and retrieve proper teacher object
+                
+                // For dummy data
+                let requestURL = "https://raw.githubusercontent.com/hyecheol123/Lingua_Teacher_Manage_Prototype/master/data.json"
                 let request = new XMLHttpRequest();
                 request.open('GET', requestURL);
                 request.send();
                 request.onreadystatechange = function() {
                     if(request.readyState === XMLHttpRequest.DONE) {
                         if(request.status == 200) {
-                            teacher = JSON.parse(request.responseText);
+                            // retrieve teacher information by name
+                            let name = document.getElementById("name").value;
+                            let teacher_list = JSON.parse(request.responseText);
+                            let teacher = undefined;
+                            for(let i = 0; i < teacher_list.length; i++) {
+                                if(teacher_list[i].name == name) {
+                                    teacher = teacher_list[i];
+                                }
+                            }
+
+                            if(teacher == undefined) { // No teacher found with the name
+                                alert("Not Existing Teacher: " + name);
+                            } else {
+                                // write data to the text box
+                                document.getElementById("addr").value = teacher.addr;
+                                document.getElementById("dept").value = teacher.dept;
+                                if(teacher.nid == null) {
+                                    document.getElementById("nid").value = "N/A";
+                                } else {
+                                    document.getElementById("nid").value = teacher.nid;
+                                }
+                                document.getElementById("contact").value = teacher.contact;
+                                if(teacher.scrime == true) {
+                                    document.getElementById("scrime").value = "O";
+                                } else {
+                                    document.getElementById("scrime").value = "X";
+                                }
+                                if(teacher.reg == false) {
+                                    document.getElementById("reg").value = "X";
+                                } else {
+                                    document.getElementById("reg").value = teacher.reg;
+                                }
+                                document.getElementById("account").value = teacher.account;
+                                document.getElementById("memo").value = teacher.memo;
+                            }
                         } else {
-                            alert("fail to load");
+                            alert("Fail to Connect DB");
                         }
                     }
                 }
-                */
             }
       </script>
   </body>
