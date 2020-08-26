@@ -42,12 +42,12 @@ ul#myTab{
 
 /*.tab-content > .active{*/
 .tab-content{
-    height: 500px;
+    height: 620px;
     border: 1.1px solid #428bca;
     border-top: none;
     border-radius: 0px 0px 8px 8px;
     padding: 20px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 #profile .profile-wrap .profile-form{
     padding: 15px;
