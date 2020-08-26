@@ -42,7 +42,7 @@ ul#myTab{
 
 /*.tab-content > .active{*/
 .tab-content{
-    height: 620px;
+    height: 600px;
     border: 1.1px solid #428bca;
     border-top: none;
     border-radius: 0px 0px 8px 8px;
