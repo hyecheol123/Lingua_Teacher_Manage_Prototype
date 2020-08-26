@@ -8,7 +8,8 @@
         "scrime":true,
         "reg":"RA",
         "account":"국민 123456-78-123456",
-        "memo": "2018-01-04부터 근무"
+        "memo": "2018-01-04부터 근무",
+        "profile_img": "img/GilDong_Hong.jpg"
     },
     {
         "name":"김현지",
@@ -19,7 +20,8 @@
         "scrime":true,
         "reg":"강사",
         "account":"부산 123-4565-7833-56",
-        "memo": "2018-03-04부터 근무"
+        "memo": "2018-03-04부터 근무",
+        "profile_img": "img/HyeonJi_Kim.jpg"
     },
     {
         "name":"김동현",
@@ -30,7 +32,8 @@
         "scrime":false,
         "reg":false,
         "account":"부산 123-4588-9933-11",
-        "memo": "2016-03-04부터 근무"
+        "memo": "2016-03-04부터 근무",
+        "profile_img": "img/DongHyeon_Kim.jpg"
     },
     {
         "name":"Leonard Hofstadter",
@@ -41,7 +44,8 @@
         "scrime":true,
         "reg":"원어민",
         "account":"부산 155-5588-0033-41",
-        "memo": "2019-03-04부터 근무"
+        "memo": "2019-03-04부터 근무",
+        "profile_img": "img/Leonard_Hofstadter.jpg"
     },
     {
         "name":"이철수",
@@ -52,6 +56,7 @@
         "scrime":true,
         "reg":false,
         "account":"우리 9876-999-543689",
-        "memo": "2013-08-29부터 근무"
+        "memo": "2013-08-29부터 근무",
+        "profile_img": "img/CheolSu_Lee.jpg"
     }
 ]
