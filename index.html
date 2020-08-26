@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -55,7 +55,76 @@
                     <tbody></tbody>
                 </table>
             </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">2...</div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="profile-wrap">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="profile-img" src="img/user.jpg">
+                        </div>
+                        <div class="col-md-8 profile-form">
+                            <!--이름 정보-->
+                            <div class="input-group mb-3">
+                                <label for="staticName" class="col-sm-2 col-form-label">이름</label>
+                                <input type="text" class="search-form" aria-describedby="search-button">
+                                <div class="input-group-append">
+                                  <button class="btn btn-outline-secondary" type="button" id="search-button" onclick="search()">
+                                    <i class="fas fa-search"></i>
+                                  </button>
+                                </div>
+                            </div>
+                            <div class="col-sm division">인적사항</div>
+                            <hr/>
+                            <div class="form-group row">
+                                 <!--부서 정보-->
+                                <label for="staticDept" class="col-sm-2 col-form-label">부서</label>
+                                <div class="col-sm-10">
+                                  <input type="text" readonly class="form-control-plaintext" id="staticDept" value="컨설팅">
+                                </div>
+                                <!--연락처 정보-->
+                                <label for="staticContact" class="col-sm-auto col-form-label">전화번호 </label>
+                                <div class="col-sm-8">
+                                  <input type="text" readonly class="form-control-plaintext" id="staticContact" value="010-0000-0000">
+                                </div>
+                                <!--주민등록번호-->
+                                <label for="staticNid" class="col-sm-auto col-form-label">주민등록번호</label>
+                                <div class="col-sm-8">
+                                  <input type="text" readonly class="form-control-plaintext" id="staticNid" value="880110-0000000">
+                                </div>
+                                <!--주소지-->
+                                <label for="staticAddr" class="col-sm-2 col-form-label">주소</label>
+                                <div class="col-sm-10">
+                                  <input type="text" readonly class="form-control-plaintext" id="staticAddr" value="부산광역시 동래구 000동 0000 빌딩 0000-1">
+                                </div>
+                            </div>
+                            <div class="col-sm division">기타사항</div>
+                            <hr/>
+                            <div class="form-group row">
+                                <!--계좌번호-->
+                                <label for="staticAccount" class="col-sm-auto col-form-label">계좌번호</label>
+                                <div class="col-sm-8">
+                                  <input type="text" readonly class="form-control-plaintext" id="staticAccount" value="국민 123456-78-123456">
+                                </div>
+                                <!--성범죄자확인, 교육청 등록-->
+                                <label for="staticReg" class="col-sm-3 col-form-label" style="padding-right:0px">교육청등록</label>
+                                <div class="col-sm-2">
+                                  <input type="text" readonly class="form-control-plaintext" id="staticReg" value="RA">
+                                </div>
+                                <label for="staticScrime" class="col-sm-3 col-form-label">성범죄확인</label>
+                                <div class="col-sm-2">
+                                  <input type="text" readonly class="form-control-plaintext" id="staticScrime" value="Y">
+                                </div>
+                                <div class="col-sm-2"></div>
+                                <!--기타 작성 사항-->
+                                <label class="col-sm-12" for="staticMemo">기타 작성 사항</label>
+                                <div class="col-sm-12">
+                                    <textarea class="text-memo">2020.01.09년에 근무 시작</textarea>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="tab-pane fade" id="menu1" role="tabpanel" aria-labelledby="menu1-tab">3...</div>
             <div class="tab-pane fade" id="menu2" role="tabpanel" aria-labelledby="menu2-tab">4...</div>
         </div>

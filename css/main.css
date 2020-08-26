@@ -49,3 +49,74 @@ ul#myTab{
     padding: 20px;
     overflow: scroll;
 }
+#profile .profile-wrap .profile-form{
+    padding: 15px;
+}
+#profile .profile-wrap .profile-form .form-group{
+    margin-left: 10px;
+}
+#profile .profile-wrap .profile-form label{
+    font-weight: 500;
+    color: #3e3e3e;
+}
+#profile .profile-wrap .profile-form .input-group > label{
+    font-weight: bold;
+    color: black;
+}
+#profile .profile-wrap .profile-form .division{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#profile .profile-wrap .profile-img{
+    position: relative;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 215px;
+    height: 215px;
+    object-fit: cover;
+}
+
+.text-memo{
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+}
+
+.profile-wrap .search-form{
+    width: 50%;
+    height: 30px;
+    border: 1.3px solid #428bca;
+    border-radius: 5px 0px 0px 5px;
+    padding: 3px;
+    font-size: 15px;
+}
+
+.profile-wrap #search-button{
+    height: 30px;
+    background-color: #428bca;
+    border: none;
+    color: white;
+}
+.profile-wrap .search-form:focus, .profile-wrap .search-form:active{
+    outline:none;
+}
+.profile-wrap #search-button i{
+    position: relative;
+    width:15px;
+    top: -4px;
+
+}
+
+.profile-wrap #search-button:focus, .profile-wrap #search-button:active{
+    outline:none;
+}
+.profile-wrap #search-button:hover{
+    background-color: #19568b;
+}
+
+.profile-wrap hr{
+    margin: 0.5rem;
+    border: 0.05rem solid #cccccc;
+}

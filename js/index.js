@@ -43,6 +43,18 @@ function renderTeacherList(){
     });
 }
 
+function search(){
+    let name = document.querySelector(".search-form").value;
+    let obj = teacher_list.find(item=>{
+        return item.name == name;
+    })
+    console.log(obj);
+    if(obj!=undefined){
+        
+    }else alert("Not Existing Teacher: " + name);
+
+}
+
 function init(){
     fetchTeacherList();
 }
