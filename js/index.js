@@ -58,7 +58,6 @@ function search(){
     })
     if(obj!=undefined){
         // Write data to the text box
-        console.log(document.getElementById("profile-img").src);
         document.getElementById("profile-img").src = obj.profile_img; // 프로필 이미지
         document.getElementById("staticDept").value = obj.dept; // 부서
         document.getElementById("staticContact").value = obj.contact; // 연락처
