@@ -67,9 +67,9 @@
                                 <label for="staticName" class="col-sm-2 col-form-label">이름</label>
                                 <input type="text" class="search-form" aria-describedby="search-button" onkeypress=enterTest()>
                                 <div class="input-group-append">
-                                  <button class="btn btn-outline-secondary" type="button" id="search-button" onclick="search()">
-                                    <i class="fas fa-search"></i>
-                                  </button>
+                                    <button class="btn btn-outline-secondary" type="button" id="search-button" onclick="search()">
+                                        <i class="fas fa-search"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="col-sm division">인적사항</div>
@@ -77,24 +77,38 @@
                             <div class="form-group row">
                                  <!--부서 정보-->
                                 <label for="staticDept" class="col-sm-2 col-form-label">부서</label>
-                                <div class="col-sm-10">
-                                  <input type="text" readonly class="form-control-plaintext" id="staticDept">
+                                <div class="col-sm-10" >
+                                    <input type="text" readonly class="form-control-plaintext" id="staticDept" style = "width:300px;"/>
                                 </div>
                                 <!--연락처 정보-->
-                                <label for="staticContact" class="col-sm-auto col-form-label">전화번호 </label>
-                                <div class="col-sm-8">
-                                  <input type="text" readonly class="form-control-plaintext" id="staticContact">
-                                </div>
+								<div style = "display : inline-block; padding-right : 10%;">
+                                    <label for="staticContact" class="col-sm-auto col-form-label">전화번호 </label>
+                                    <div class="col-sm-8" >
+                                        <input type="text" readonly class="form-control-plaintext" id="staticContact" style = "position :static; width:200px; " />
+                                    </div>
+								</div>
+								
+								
+								<div style = "display : inline-block; ">
                                 <!--주민등록번호-->
                                 <label for="staticNid" class="col-sm-auto col-form-label">주민등록번호</label>
-                                <div class="col-sm-8">
-                                  <input type="text" readonly class="form-control-plaintext" id="staticNid">
-                                </div>
+								<span style = "display: block;overflow: hidden;padding: 0 4px 0 6px">
+                                    <div class="col-sm-8">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticNid" style = "position : static; width:300px;"/>
+                                    </div>
+								</span>
+								
+								</div>
+								
                                 <!--주소지-->
-                                <label for="staticAddr" class="col-sm-2 col-form-label">주소</label>
-                                <div class="col-sm-10">
-                                  <input type="text" readonly class="form-control-plaintext" id="staticAddr">
-                                </div>
+								<div style = "display : block;  width:100%;">
+                                    <label for="staticAddr" class="col-sm-2 col-form-label" style="float:left">주소</label>
+                                    <span style = "display: block;overflow: hidden;padding: 0 4px 0 6px">
+                                        <div class="col-sm-10">
+                                            <input type="text" readonly class="form-control-plaintext" id="staticAddr">
+                                        </div>
+                                    </span>
+								</div>
                             </div>
                             <div class="col-sm division">기타사항</div>
                             <hr/>
@@ -102,16 +116,16 @@
                                 <!--계좌번호-->
                                 <label for="staticAccount" class="col-sm-auto col-form-label">계좌번호</label>
                                 <div class="col-sm-8">
-                                  <input type="text" readonly class="form-control-plaintext" id="staticAccount">
+                                    <input type="text" readonly class="form-control-plaintext" id="staticAccount">
                                 </div>
                                 <!--성범죄자확인, 교육청 등록-->
                                 <label for="staticReg" class="col-sm-3 col-form-label" style="padding-right:0px">교육청등록</label>
                                 <div class="col-sm-2">
-                                  <input type="text" readonly class="form-control-plaintext" id="staticReg">
+                                    <input type="text" readonly class="form-control-plaintext" id="staticReg">
                                 </div>
                                 <label for="staticScrime" class="col-sm-3 col-form-label">성범죄확인</label>
                                 <div class="col-sm-2">
-                                  <input type="text" readonly class="form-control-plaintext" id="staticScrime">
+                                    <input type="text" readonly class="form-control-plaintext" id="staticScrime">
                                 </div>
                                 <div class="col-sm-2"></div>
                                 <!--기타 작성 사항-->
@@ -119,7 +133,6 @@
                                 <div class="col-sm-12">
                                     <textarea class="text-memo", id="memo"></textarea>
                                 </div>
-                            
                             </div>
                         </div>
                     </div>
@@ -131,5 +144,4 @@
     </div>
     <script src="js/index.js"></script>
 </body>
-
 </html>
