@@ -43,6 +43,14 @@ function renderTeacherList(){
     });
 }
 
+function enterTest() {
+    // function to check whether enter key is pressed inside "search-form"
+    // when enter key pressed, search teacher by the name
+    if(window.event.keyCode == 13) {
+        search();
+    }
+}
+
 function search(){
     let name = document.querySelector(".search-form").value;
     let obj = teacher_list.find(item=>{
@@ -50,7 +58,7 @@ function search(){
     })
     console.log(obj);
     if(obj!=undefined){
-        
+        // TODO: Print proper data to the document
     }else alert("Not Existing Teacher: " + name);
 
 }
