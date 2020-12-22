@@ -1,6 +1,6 @@
 # Lingua Teacher Manage Prototype
 Demo for Lingua's Teacher Manage System  
-Demo Link: https://linguademo.hcjang.com
+Demo Link: https://hyecheol123.github.io/Lingua_Teacher_Manage_Prototype/
 
 ### Sample Data
 - 홍길동
